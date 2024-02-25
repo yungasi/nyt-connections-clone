@@ -1,0 +1,82 @@
+const buttons = `[
+    {
+        "id": "b1",
+        "label": "ctrl (2017) by sza",
+        "group": 1
+    },
+    {
+        "id": "b2",
+        "label": "a good night's sleep",
+        "group": 1
+    },
+    {
+        "id": "b3",
+        "label": "beyonce's renaissance world tour",
+        "group": 1
+    },
+    {
+        "id": "b4",
+        "label": "slurpees & an evening walk",
+        "group": 1
+    },
+    {
+        "id": "b5",
+        "label": "undiagnosed mild autism/adhd",
+        "group": 2
+    },
+    {
+        "id": "b6",
+        "label": "chronically online",
+        "group": 2
+    },
+    {
+        "id": "b7",
+        "label": "always sleepy",
+        "group": 2
+    },
+    {
+        "id": "b8",
+        "label": "superior music taste",
+        "group": 2
+    },
+    {
+        "id": "b9",
+        "label": "yearning",
+        "group": 3
+    },
+    {
+        "id": "b10",
+        "label": "rotting",
+        "group": 3
+    },
+    {
+        "id": "b11",
+        "label": "watching hour-long video essays",
+        "group": 3
+    },
+    {
+        "id": "b12",
+        "label": "reading reddit episode discussions",
+        "group": 3
+    },
+    {
+        "id": "b13",
+        "label": "real self confidence",
+        "group": 4
+    },
+    {
+        "id": "b14",
+        "label": "movie appreciation",
+        "group": 4
+    },
+    {
+        "id": "b15",
+        "label": "true love",
+        "group": 4
+    },
+    {
+        "id": "b16",
+        "label": "white men aren't all bad",
+        "group": 4
+    }
+]`;

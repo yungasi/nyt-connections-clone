@@ -1,0 +1,22 @@
+const answers = `[
+    {
+        "id": "a1",
+        "label": "things i never want to end (like our relationship)",
+        "group": 1 
+    },
+    {
+        "id": "a2",
+        "label": "common personality traits",
+        "group": 2
+    },
+    {
+        "id": "a3",
+        "label": "hobbies we have in common",
+        "group": 3 
+    },
+    {
+        "id": "a4",
+        "label": "things i've learned from you",
+        "group": 4 
+    }
+]`;
