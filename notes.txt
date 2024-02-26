@@ -1,0 +1,17 @@
+things to include in readme:
+    how to run (?)
+    intro -> link to real nyt connections?
+    preface made for chris, explaination
+    how to change json to customize game
+
+changes to make:
+    shuffle positions
+    either give up button or 3 strikes
+    replay button
+    restart
+    media queries
+    init and end card animation
+    dark mode
+
+changes made:
+    one away...

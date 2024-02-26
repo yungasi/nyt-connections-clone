@@ -1,4 +1,4 @@
-:root {
+:root { 
     --button-colour: #f1f2f6;
     --button-active-colour: #9193B1;
     --button-text-colour: #2b2b2b;
@@ -15,7 +15,8 @@ body {
     text-align: center;
 }
 
-#start {
+/** LANDING **/
+#start, #replay-button {
     background-color: var(--bg-colour);
     color: var(--button-text-colour);
     outline: 0;
@@ -30,17 +31,14 @@ body {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
-#start:hover {
+#start:hover, #replay-button:hover {
     transform: translateY(-2px);
     background-color: #4B5767;
     color: var(--button-colour);
 }
 
-#start-cont p {
-    color: white;
-}
-
 #start-cont {
+    color: white;
     background-color: #8795A7;
     margin: auto;
     height: auto;
@@ -58,6 +56,15 @@ body {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
+#wrapper {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    width: 100%;
+}
+
 #grid {
     display: grid;
     position: relative;
@@ -68,10 +75,28 @@ body {
     grid-template-rows: repeat(4, 1fr);
 }
 
-#title, #end {
-    margin-top: 4%;
+#title {
+    margin: 10px 0;
     font-family: "Lora", serif;
     color: var(--button-text-colour);
+}
+
+/** MAIN GAMEPLAY **/
+
+.lives {
+    width: 13px;
+    height: 13px;
+    background-color: var(--button-active-colour);
+    border-radius: 100%;
+    margin: 0 10px;
+}
+
+#lives-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 .button {
@@ -90,6 +115,17 @@ body {
     width: 95%;
     margin: 5px 8px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.button:hover{
+    transform: translateY(-2px);
+    background-color: var(--button-active-colour);
+    color: var(--button-colour);
+}
+
+.button-active {
+    background-color: var(--button-active-colour);
+    color: var(--button-colour);
 }
 
 .answer {
@@ -113,33 +149,16 @@ body {
 #ans3 { background-color: var(--answer-3-colour); }
 #ans4 { background-color: var(--answer-4-colour); }
 
-.button:hover{
-    transform: translateY(-2px);
-    background-color: var(--button-active-colour);
-    color: var(--button-colour);
+#one-away {
+    visibility: hidden;
+    opacity: 1;
+    animation: fade 5s ease-in-out;
 }
 
-.button-active {
-    background-color: var(--button-active-colour);
-    color: var(--button-colour);
-}
 
-/** animations **/
-@keyframes shake {
-    0% { transform: translateX(0) }
-    25% { transform: translateX(2px) }
-    50% { transform: translateX(-2px) }
-    75% { transform: translateX(2px) }
-    100% { transform: translateX(0) }
-}
-
+/** GAME ANIMATIONS **/
 .button-wrong-answer {
     animation: shake 0.5s linear 0.5s;
-}
-
-@keyframes scale {
-    0% { transform: scale(1.0); }
-    100% { transform: scale(1.09); }
 }
 
 .button-right-answer {
@@ -151,12 +170,67 @@ body {
     animation-direction: reverse;
 }
 
-@keyframes reveal {
-    0% { transform: translate(0,100%); visibility: 0%;}
-    100% { transform: translate(0,0); visibility: 100%;}
+@keyframes shake {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(2px) }
+    50% { transform: translateX(-2px) }
+    75% { transform: translateX(2px) }
+    100% { transform: translateX(0) }
 }
 
+@keyframes scale {
+    0% { transform: scale(1.0); }
+    100% { transform: scale(1.09); }
+    
+}
+
+@keyframes fade {
+    0%, 100% { opacity: 0 }
+    50% { opacity: 1 }
+}
+
+
+/** END **/
 .end-reveal {
     display: block;
     animation: reveal 0.7s ease-out;
+}
+
+#end-cont {
+    display: block;
+    color: white;
+    background-color: #8795A7;
+    margin: auto;
+    height: auto;
+    width: 650px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    left: 50%;
+    justify-content: column;
+    align-content: center;
+    font-family: "Roboto", sans-serif;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    z-index: 10;
+}
+
+#dim {
+    display: block;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    right: 0px;
+    bottom: 0px;
+    background-color: var(--button-text-colour);
+    opacity: 35%;
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+@keyframes reveal {
+    0% { transform: translate(0,100%); visibility: 0%;}
+    100% { transform: translate(0,0); visibility: 100%;}
 }
