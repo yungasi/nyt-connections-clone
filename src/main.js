@@ -1,4 +1,4 @@
-import { play } from "./src/game.js";
+import { play } from "/nyt-connections-clone/src/game.js";
 export { end };
 
 // initialization
