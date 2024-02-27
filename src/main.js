@@ -1,4 +1,4 @@
-import { play } from "./game.js";
+import { play } from "./src/game.js";
 export { end };
 
 // initialization
