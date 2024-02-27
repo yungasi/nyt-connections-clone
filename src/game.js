@@ -1,4 +1,4 @@
-import { end } from "/src/main.js";
+import { end } from "./src/main.js";
 export { play };
 
 // get button labels & answers
